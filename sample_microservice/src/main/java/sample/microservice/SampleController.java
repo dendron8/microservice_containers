@@ -14,7 +14,7 @@ public class SampleController {
 		Session session;
 		
 		cluster = Cluster.builder().addContactPoint("127.0.0.1").build();
-		//lets see what happens
+		//lets see what happens when we commit
 		session = cluster.connect("mykeyspace");
 		
 		ResultSet results = session.execute("select * from users");
