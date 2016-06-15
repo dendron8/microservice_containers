@@ -4,7 +4,7 @@ apply plugin: 'spring-boot'//spring boot support in gradle - package jars/wars a
 apply plugin: "io.spring.dependency-management" //maven-like dependency management
 
 buildscript {
-	//this is for building your microservice with gradle
+	//this is for building your microservice with gradle.
 		repositories {
 		//all dependencies for gssp microservices will be pulled from this instance of artifactory
 			mavenCentral()
