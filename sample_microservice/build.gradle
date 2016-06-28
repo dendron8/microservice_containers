@@ -7,7 +7,7 @@ apply plugin: 'docker'
 group = 'philhelm'
 
 task buildDocker(type: Docker, dependsOn: build) {
-	push = true
+	push = false
 	applicationName = 'sample_microservice'
 	dockerfile = file('src/main/docker/Dockerfile')
 	doFirst {
