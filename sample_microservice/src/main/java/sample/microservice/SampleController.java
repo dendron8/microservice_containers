@@ -13,7 +13,7 @@ public class SampleController {
 		Cluster cluster;
 		Session session;
 		
-		cluster = Cluster.builder().addContactPoint("localhost").build();
+		cluster = Cluster.builder().addContactPoint("127.0.0.1").build();
 		//lets see what happens when we commit
 		session = cluster.connect("mykeyspace");
 		
