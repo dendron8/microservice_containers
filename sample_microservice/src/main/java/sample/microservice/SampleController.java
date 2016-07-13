@@ -13,7 +13,15 @@ public class SampleController {
 		Cluster cluster;
 		Session session;
 		
-		cluster = Cluster.builder().addContactPoint("172.17.0.3").build();
+		//cqlsh commands entered into cassandra
+		/*CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+		USE mykeyspace;
+		CREATE TABLE users (user_id int PRIMARY KEY, fname text, lname text);
+		INSERT INTO users (user_id,  fname, lname) VALUES (1745, 'john', 'smith');
+		INSERT INTO users (user_id,  fname, lname) VALUES (1744, 'john', 'doe');
+		INSERT INTO users (user_id,  fname, lname) VALUES (1746, 'john', 'smith'); */
+		
+		cluster = Cluster.builder().addContactPoint("172.17.0.2").build();
 		//lets see what happens when we commit
 		session = cluster.connect("mykeyspace");
 		
