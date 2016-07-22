@@ -1,10 +1,12 @@
 package sample.microservice;
 
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.datastax.driver.core.*;
 
 @RestController
+@EnableEurekaClient
 public class SampleController {
 	
 	@RequestMapping("/")

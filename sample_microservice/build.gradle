@@ -21,7 +21,6 @@ task buildDocker(type: Docker, dependsOn: build) {
 buildscript {
 	//this is for building your microservice with gradle.
 		repositories {
-		//all dependencies for gssp microservices will be pulled from this instance of artifactory
 			mavenCentral()
 		}
 		dependencies {
@@ -59,6 +58,7 @@ dependencies {
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
 	compile('org.springframework.boot:spring-boot-starter-web') //spring boot w tomcat default
 	compile('com.datastax.cassandra:cassandra-driver-core:3.0.0')
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.1.4.RELEASE'
 }
 
 
