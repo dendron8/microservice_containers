@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import com.datastax.driver.core.*;
 
 @RestController
-@EnableDiscoveryClient
+@EnableEurekaClient
 @Configuration
 @EnableAutoConfiguration
 public class SampleController {
