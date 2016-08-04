@@ -61,7 +61,9 @@ dependencies {
 	compile('com.datastax.cassandra:cassandra-driver-core:3.0.0')
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.1.4.RELEASE'
 	compile 'org.springframework.cloud:spring-cloud-starter-config:1.1.1.RELEASE'
-	
+	compile("org.springframework.cloud:spring-cloud-starter-hystrix:1.1.2.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-actuator:1.1.2.RELEASE")
+	compile("org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard:1.1.2.RELEASE")
 }
 
 
